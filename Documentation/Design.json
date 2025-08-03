@@ -1,0 +1,206 @@
+
+{
+  "designSystemProfile": {
+    "name": "AgriCultur Dashboard UI",
+    "version": "1.0",
+    "description": "A design system for an agricultural management dashboard, characterized by a clean layout, vibrant accent colors, and data-centric card components.",
+    "colors": {
+      "primary": {
+        "accent": "#D7F449",
+        "description": "Vibrant lime green used for active states and primary highlights."
+      },
+      "background": {
+        "app": "#F8F9FA",
+        "sidebar": "#FFFFFF",
+        "card": "#FFFFFF",
+        "input": "#FFFFFF",
+        "progressBarTrack": "#E5E7EB"
+      },
+      "text": {
+        "primary": "#1F2937",
+        "secondary": "#6B7280",
+        "tertiary": "#9CA3AF",
+        "onAccent": "#1F2937",
+        "onGradient": "#1F2937",
+        "value": "#000000"
+      },
+      "gradients": {
+        "weatherCard": "linear-gradient(110deg, #A5E3FF 0%, #F5F77E 100%)"
+      },
+      "semantic": {
+        "wheat": "#FBBF24",
+        "rice": "#4ADE80",
+        "maize": "#A78BFA",
+        "circularProgressWheat": "#60A5FA",
+        "circularProgressRice": "#4ADE80",
+        "pieChartRice": "#22C55E",
+        "pieChartWheat": "#D1FAE5"
+      },
+      "shadows": {
+        "card": "0px 4px 15px rgba(0, 0, 0, 0.06)",
+        "description": "A single, soft shadow style for all elevated card elements."
+      },
+      "borders": {
+        "profileIcon": "#E5E7EB"
+      }
+    },
+    "typography": {
+      "fontFamily": "Inter, sans-serif",
+      "styles": {
+        "heading1": {
+          "comment": "e.g., 'agri cultur' logo text",
+          "fontWeight": "700",
+          "fontSize": "20px",
+          "color": "colors.text.primary"
+        },
+        "heading2": {
+          "comment": "e.g., Card titles like 'Summary'",
+          "fontWeight": "600",
+          "fontSize": "18px",
+          "color": "colors.text.primary"
+        },
+        "heading3": {
+          "comment": "e.g., Sub-titles like 'Wheat', '29°'",
+          "fontWeight": "600",
+          "fontSize": "16px",
+          "color": "colors.text.primary"
+        },
+        "valueLarge": {
+          "comment": "e.g., '125', '980', '$100K'",
+          "fontWeight": "700",
+          "fontSize": "28px",
+          "color": "colors.text.value"
+        },
+        "body": {
+          "comment": "e.g., 'Total production', 'Rainy - Cloudy'",
+          "fontWeight": "400",
+          "fontSize": "14px",
+          "color": "colors.text.secondary"
+        },
+        "label": {
+          "comment": "e.g., Percentage labels, navigation items",
+          "fontWeight": "500",
+          "fontSize": "14px",
+          "color": "colors.text.secondary"
+        },
+        "placeholder": {
+          "comment": "e.g., 'Search any of content'",
+          "fontWeight": "400",
+          "fontSize": "14px",
+          "color": "colors.text.tertiary"
+        }
+      }
+    },
+    "elementStyling": {
+      "sidebarNavigation": {
+        "container": {
+          "background": "colors.background.sidebar"
+        },
+        "navItem": {
+          "default": {
+            "background": "transparent",
+            "iconFill": "colors.text.secondary",
+            "textColor": "colors.text.secondary",
+            "borderRadius": "8px"
+          },
+          "active": {
+            "background": "colors.primary.accent",
+            "iconFill": "colors.text.onAccent",
+            "textColor": "colors.text.onAccent"
+          },
+          "hover": {
+            "background": "colors.background.app"
+          }
+        },
+        "logoutButton": {
+          "iconFill": "colors.text.secondary",
+          "textColor": "colors.text.secondary"
+        }
+      },
+      "header": {
+        "searchBar": {
+          "background": "colors.background.input",
+          "borderRadius": "8px",
+          "placeholderTextColor": "colors.typography.placeholder.color",
+          "iconFill": "colors.text.tertiary"
+        },
+        "profileIcon": {
+          "border": "1px solid colors.borders.profileIcon",
+          "borderRadius": "50%"
+        }
+      },
+      "cards": {
+        "base": {
+          "background": "colors.background.card",
+          "borderRadius": "20px",
+          "shadow": "shadows.card",
+          "padding": "24px"
+        },
+        "summaryCard": {
+          "inherits": "cards.base",
+          "circularProgress": {
+            "trackColor": "colors.background.progressBarTrack",
+            "progressColor": {
+              "wheat": "colors.semantic.circularProgressWheat",
+              "rice": "colors.semantic.circularProgressRice"
+            },
+            "percentageTextColor": "colors.text.primary"
+          }
+        },
+        "weatherCard": {
+          "inherits": "cards.base",
+          "background": "colors.gradients.weatherCard",
+          "contentColor": "colors.text.onGradient"
+        },
+        "weatherForecastDayCard": {
+          "inherits": "cards.base",
+          "shadow": "none",
+          "padding": "16px"
+        },
+        "predictiveAnalysisCard": {
+          "inherits": "cards.base",
+          "progressBar": {
+            "background": "colors.background.progressBarTrack",
+            "borderRadius": "12px",
+            "fillColors": {
+              "wheat": "colors.semantic.wheat",
+              "rice": "colors.semantic.rice",
+              "maize": "colors.semantic.maize"
+            }
+          }
+        },
+        "harvestingCostCard": {
+          "inherits": "cards.base",
+          "pieChart": {
+            "sliceColors": {
+              "rice": "colors.semantic.pieChartRice",
+              "wheat": "colors.semantic.pieChartWheat"
+            }
+          }
+        }
+      },
+      "buttons": {
+        "textLink": {
+          "comment": "e.g., 'open app'",
+          "default": {
+            "textColor": "colors.text.secondary",
+            "textDecoration": "underline"
+          },
+          "hover": {
+            "textColor": "colors.text.primary"
+          }
+        }
+      }
+    },
+    "misapplicationPreventionRules": {
+      "do_not": [
+        "DO NOT apply the 'weatherCard' gradient to any other element, including buttons, icons, or standard cards.",
+        "DO NOT apply shadows to text, icons, or inline elements. Shadows are reserved for container-level elements like cards.",
+        "DO NOT use the primary accent color ('#D7F449') for anything other than the active navigation state. It is not a general-purpose button or link color.",
+        "DO NOT use semantic colors (e.g., 'wheat', 'rice') outside of their data visualization context (progress bars, charts).",
+        "DO NOT apply borders to cards, except where explicitly defined (e.g., 'profileIcon'). Cards are elevated using shadows only."
+      ]
+    }
+  }
+}
+
