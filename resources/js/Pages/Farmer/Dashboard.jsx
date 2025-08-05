@@ -109,7 +109,6 @@ export default function FarmerDashboard({ user }) {
         <FarmerLayout header="Farmer Dashboard" user={user}>
             <div className="space-y-6">
 
-
                 {/* Top Section - Summary Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-3 gap-6">
                     {/* Wheat Production Card */}
@@ -186,14 +185,9 @@ export default function FarmerDashboard({ user }) {
                         </CardContent>
                     </Card>
 
-                                        {/* Weather Forecast Section */}
+                    {/* Weather Forecast Section */}
                     <div className="lg:col-span-1 space-y-4">
-                        {/* Header */}
-                        <div className="flex items-center justify-between">
-                            <h3 className="text-[#1F2937] font-semibold text-lg">Weather forecast</h3>
-                            <span className="text-blue-600 text-sm underline cursor-pointer">open app</span>
-                        </div>
-
+                        
                         {/* Today's Weather Card */}
                         <Card className="bg-[#D1FAE5] border-0 shadow-[0px_4px_15px_rgba(0,0,0,0.06)]">
                             <CardContent className="p-6">
@@ -235,11 +229,11 @@ export default function FarmerDashboard({ user }) {
                     </div>
                 </div>
 
-                                {/* Middle Section - Farm Illustration */}
+                {/* Middle Section - Farm Illustration */}
                 <Card className="border-0 shadow-[0px_4px_15px_rgba(0,0,0,0.06)]">
                     <CardContent className="p-6">
                         <div className="text-center">
-                            <h3 className="text-[#1F2937] font-semibold text-lg mb-4">Manage your farm (Illustration)</h3>
+                            <h3 className="text-foreground font-semibold text-lg mb-4">Manage your farm (Illustration)</h3>
                             <div className="relative h-48 rounded-lg overflow-hidden">
                                 <img
                                     src="/images/illus.jpg"
@@ -255,20 +249,20 @@ export default function FarmerDashboard({ user }) {
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
                     {/* Predictive Analysis Cards */}
                     <div className="lg:col-span-3">
-                        <h3 className="text-[#1F2937] font-semibold text-lg mb-4">Predictive analysis</h3>
+                        <h3 className="text-foreground font-semibold text-lg mb-4">Predictive analysis</h3>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                             {/* January '22 Card */}
-                            <Card className="bg-white border-0 shadow-[0px_4px_15px_rgba(0,0,0,0.06)]">
+                            <Card className="bg-card border-0 shadow-[0px_4px_15px_rgba(0,0,0,0.06)]">
                                 <CardContent className="p-6">
-                                    <h4 className="text-[#1F2937] font-semibold text-base mb-4">January '22</h4>
+                                    <h4 className="text-foreground font-semibold text-base mb-4">January '22</h4>
                                     <div className="space-y-3">
                                         {predictiveData.map((item, index) => (
                                             <div key={index}>
                                                 <div className="flex justify-between items-center mb-1">
-                                                    <span className="text-[#6B7280] text-sm">{item.crop}</span>
-                                                    <span className="text-[#1F2937] font-semibold text-sm">{item.percentage}%</span>
+                                                    <span className="text-muted-foreground text-sm">{item.crop}</span>
+                                                    <span className="text-foreground font-semibold text-sm">{item.percentage}%</span>
                                                 </div>
-                                                <div className="w-full bg-[#E5E7EB] rounded-full h-2">
+                                                <div className="w-full bg-muted rounded-full h-2">
                                                     <div
                                                         className="h-2 rounded-full"
                                                         style={{
