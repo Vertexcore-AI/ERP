@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -41,37 +42,37 @@ Route::middleware('auth')->group(function () {
     Route::prefix('farmer')->group(function () {
         Route::get('/dashboard', function () {
             return Inertia::render('Farmer/Dashboard', [
-                'user' => auth()->user()
+                'user' => Auth::user()
             ]);
         })->name('farmer.dashboard');
 
         Route::get('/crops', function () {
             return Inertia::render('Farmer/Crops', [
-                'user' => auth()->user()
+                'user' => Auth::user()
             ]);
         })->name('farmer.crops');
 
         Route::get('/inventory', function () {
             return Inertia::render('Farmer/Inventory', [
-                'user' => auth()->user()
+                'user' => Auth::user()
             ]);
         })->name('farmer.inventory');
 
         Route::get('/harvest', function () {
             return Inertia::render('Farmer/Harvest', [
-                'user' => auth()->user()
+                'user' => Auth::user()
             ]);
         })->name('farmer.harvest');
 
         Route::get('/sales', function () {
             return Inertia::render('Farmer/Sales', [
-                'user' => auth()->user()
+                'user' => Auth::user()
             ]);
         })->name('farmer.sales');
 
         Route::get('/reports', function () {
             return Inertia::render('Farmer/Reports', [
-                'user' => auth()->user()
+                'user' => Auth::user()
             ]);
         })->name('farmer.reports');
     });
